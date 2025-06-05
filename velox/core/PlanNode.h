@@ -1236,6 +1236,10 @@ class LocalPartitionNode : public PlanNode {
     return *partitionFunctionSpec_;
   }
 
+  const PartitionFunctionSpecPtr& partitionFunctionSpecPtr() const {
+    return partitionFunctionSpec_;
+  }
+
   std::string_view name() const override {
     return "LocalPartition";
   }
